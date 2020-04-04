@@ -1,0 +1,23 @@
+{
+  "name": "spa",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack",
+    "start:dev": "webpack-dev-server --progress --color --open"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "mergerino": "^0.4.0",
+    "mithril": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
