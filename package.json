@@ -1,11 +1,11 @@
 {
-  "name": "spa",
+  "name": "spa-boilerplate",
   "version": "1.0.0",
   "private": true,
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack",
-    "start:dev": "webpack-dev-server --progress --color --open"
+    "build": "webpack --env.production",
+    "start:dev": "webpack-dev-server --env.development --progress --color --open"
   },
   "license": "MIT",
   "dependencies": {
