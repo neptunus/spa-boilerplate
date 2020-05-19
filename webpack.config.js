@@ -14,8 +14,8 @@ module.exports = {
   devServer: {
     contentBase: __dirname,
     hot: true,
-    compress: true,
-    port: 9000,
+    host: '0.0.0.0',
+    port: '8080',
     publicPath: '/build/',
   },
   module: {
@@ -26,6 +26,34 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: {
+          loader: "url-loader"
+        }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: "url-loader",
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            }
+          },
+          {
+            loader: 'postcss-loader'
+          }
+        ]
       }
     ]
   }

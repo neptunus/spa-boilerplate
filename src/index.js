@@ -1,6 +1,7 @@
 import merge from "mergerino"
 import m from "mithril"
 import stream from "mithril/stream"
+import "./styles/main.css"
 
 import { app, App } from "./app"
 
